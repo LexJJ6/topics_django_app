@@ -1,0 +1,19 @@
+<h1>{{title}}</h1>
+<p>Descrição:{{description}}</p>
+<p>Autor:{{author}}</p>
+{% if comments %}
+    <h2>Comentários:</h2>
+    <ul>
+        {% for comment in comments %}
+            <p>{{comment.text}}</p>
+            <a href="./{{comment.id}}/edit">Editar comentário</a>
+            <a href="./{{comment.id}}/delete">Eliminar comentário</a>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Este tópico não tem comentários.</p>
+{% endif %}
+<a href="./edit">Editar Tópico</a> <br><br>
+<a href="./delete">Eliminar Tópico</a> <br><br>
+<a href="./new-comment">Comentar</a> <br><br>
+<a href="../">Voltar</a>

@@ -1,0 +1,14 @@
+<h1>Novo Tópico</h1>
+<form method="post">
+    <label for="title">Título</label>
+    <input type="text" id="title" name="title" /> <br> <br>
+    <label for="description">Descrição</label>
+    <input type="text" id="description" name="description" /> <br> <br>
+    <label for="author">Autor</label>
+    <input type="text" id="author" name="author" /> <br> <br>
+    <button type="submit">Criar Tópico</button>
+</form>
+{% if message %}
+    <p style="color: red;">{{message}}</p>
+{% endif %}
+<a href="../">Cancelar</a>
